@@ -1,0 +1,398 @@
+{
+  "data":{
+    "monsters":1,
+    "items":[
+      {
+        "c":1,
+        "id":{"evo1.InventoryItem":"Potion"}
+      }, {
+        "c":1,
+        "id":{"evo1.InventoryItem":"Sword2"}
+      }, {
+        "c":1,
+        "id":{"evo1.InventoryItem":"Armor2"}
+      }, {
+        "c":1,
+        "id":{"evo1.InventoryItem":"BigSword"}
+      }, {
+        "c":1,
+        "id":{"evo1.InventoryItem":"Bombs"}
+      }, {
+        "c":1,
+        "id":{"evo1.InventoryItem":"MagicScroll"}
+      }
+    ],
+    "stars":0,
+    "levels":[
+      {
+        "lv":3,
+        "xp":8
+      }, {
+        "lv":3,
+        "xp":8
+      }
+    ],
+    "cardLevel":0,
+    "wdata":[
+      {
+        "stars":0,
+        "chests":[
+          4695, 
+          4690, 
+          4512, 
+          4251, 
+          4699, 
+          5520, 
+          4983, 
+          4720, 
+          3999, 
+          4544, 
+          3003, 
+          2754, 
+          1185, 
+          5367
+        ],
+        "act":[
+        ],
+        "rem":[
+          5070, 
+          4982, 
+          4629, 
+          3024, 
+          3026, 
+          1744, 
+          1837, 
+          1926, 
+          2198, 
+          2380, 
+          2379, 
+          2558, 
+          4468, 
+          5008, 
+          5007
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          7119, 
+          5972, 
+          4948, 
+          9805
+        ],
+        "act":[
+        ],
+        "rem":[
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          527, 
+          0, 
+          372
+        ],
+        "act":[
+        ],
+        "rem":[
+          366, 
+          369, 
+          273, 
+          270
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          1967
+        ],
+        "act":[
+        ],
+        "rem":[
+          0
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+        ],
+        "act":[
+        ],
+        "rem":[
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          4721
+        ],
+        "act":[
+        ],
+        "rem":[
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          4046, 
+          3369, 
+          3788, 
+          3435, 
+          3518, 
+          3356, 
+          0, 
+          3337, 
+          1982, 
+          1114, 
+          1552, 
+          1393, 
+          374, 
+          1313, 
+          1914, 
+          2357, 
+          1583, 
+          2705, 
+          4839, 
+          5121
+        ],
+        "act":[
+          3203, 
+          3195, 
+          3597, 
+          1032, 
+          174, 
+          181, 
+          372, 
+          376
+        ],
+        "rem":[
+          3958, 
+          3688, 
+          3692, 
+          3774, 
+          3778, 
+          3779, 
+          3526, 
+          3102, 
+          1885, 
+          1028, 
+          439, 
+          1054, 
+          887, 
+          2343, 
+          2006, 
+          1943, 
+          2194, 
+          4631, 
+          5302, 
+          4707, 
+          4622, 
+          5298, 
+          5546
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          5220, 
+          3138, 
+          1873
+        ],
+        "act":[
+          3014
+        ],
+        "rem":[
+          0
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+          4039
+        ],
+        "act":[
+        ],
+        "rem":[
+          41
+        ],
+        "cards":0
+      }, {
+        "stars":0,
+        "chests":[
+        ],
+        "act":[
+        ],
+        "rem":[
+        ],
+        "cards":0
+      }, {
+        "act":[
+        ],
+        "cards":0,
+        "chests":[
+          -18, 
+          -11
+        ],
+        "rem":[
+        ],
+        "stars":0
+      }, {
+        "act":[
+        ],
+        "cards":0,
+        "chests":[
+          28687, 
+          26137, 
+          24615, 
+          23859, 
+          17717, 
+          9006
+        ],
+        "rem":[
+        ],
+        "stars":0
+      }
+    ],
+    "maxLife":12,
+    "invNotify":1,
+    "finalLife":100,
+    "campQuest":null,
+    "villageUnlock":1,
+    "world":{"evo1.WorldKind":"WHack"},
+    "hackKills":0,
+    "selectHero":1,
+    "airShip":null,
+    "cidName":"Sid",
+    "nchests":54,
+    "chests":[
+      { "id":37, "has":true }, 
+      { "id":74, "has":true }, 
+      { "id":0, "has":true }, 
+      { "id":38, "has":true }, 
+      { "id":1, "has":true }, 
+      { "id":39, "has":true }, 
+      { "id":76, "has":true }, 
+      { "id":2, "has":true }, 
+      { "id":40, "has":true }, 
+      { "id":114, "has":true }, 
+      { "id":77, "has":true }, 
+      { "id":3, "has":true }, 
+      { "id":41, "has":true }, 
+      { "id":4, "has":true }, 
+      { "id":5, "has":true }, 
+      { "id":6, "has":true }, 
+      { "id":7, "has":true }, 
+      { "id":82, "has":true }, 
+      { "id":8, "has":true }, 
+      { "id":9, "has":true }, 
+      { "id":47, "has":true }, 
+      { "id":10, "has":true }, 
+      { "id":48, "has":true }, 
+      { "id":11, "has":true }, 
+      { "id":49, "has":true }, 
+      { "id":12, "has":true }, 
+      { "id":50, "has":true }, 
+      { "id":14, "has":true }, 
+      { "id":15, "has":true }, 
+      { "id":52, "has":true }, 
+      { "id":16, "has":true }, 
+      { "id":53, "has":true }, 
+      { "id":54, "has":true }, 
+      { "id":17, "has":true }, 
+      { "id":18, "has":true }, 
+      { "id":56, "has":true }, 
+      { "id":19, "has":true }, 
+      { "id":57, "has":true }, 
+      { "id":20, "has":true }, 
+      { "id":21, "has":true }, 
+      { "id":96, "has":true }, 
+      { "id":59, "has":true }, 
+      { "id":22, "has":true }, 
+      { "id":23, "has":true }, 
+      { "id":61, "has":true }, 
+      { "id":24, "has":true }, 
+      { "id":62, "has":true }, 
+      { "id":25, "has":true }, 
+      { "id":63, "has":true }, 
+      { "id":26, "has":true }, 
+      { "id":64, "has":true }, 
+      { "id":27, "has":true }, 
+      { "id":65, "has":true }, 
+      { "id":66, "has":true }, 
+      { "id":29, "has":true }, 
+      { "id":67, "has":true }, 
+      { "id":31, "has":true }, 
+      { "id":68, "has":true }, 
+      { "id":32, "has":true }, 
+      { "id":69, "has":true }, 
+      { "id":33, "has":true }, 
+      { "id":70, "has":true }, 
+      { "id":71, "has":true }, 
+      { "id":34, "has":true }, 
+      { "id":72, "has":true }, 
+      { "id":35, "has":true }, 
+      { "id":73, "has":true }, 
+      { "id":36, "has":true }
+    ],
+    "weapons":1,
+    "ach":{
+      "gold":2080,
+      "pots":3,
+      "skel":3,
+      "turt":0,
+      "switches":0
+    },
+    "pos":{
+      "x":81,
+      "y":56
+    },
+    "hackEquip":[
+      {
+        "flag":0,
+        "id":1
+      }, {
+        "flag":0,
+        "id":0
+      }, {
+        "flag":0,
+        "id":3
+      }, {
+        "flag":0,
+        "id":2
+      }, {
+        "flag":1,
+        "id":5
+      }
+    ],
+    "bars":0,
+    "cards":[
+    ],
+    "girlBits":1022,
+    "has3D":1,
+    "keys":0,
+    "scroll":2,
+    "left":1,
+    "life":12,
+    "girlLife":70,
+    "girlName":"Kaeris",
+    "bahaNext":0,
+    "color":1,
+    "canSave":1,
+    "freeMove":1,
+    "money":1880,
+    "view":5,
+    "music":1,
+    "zoom":3,
+    "actionItem":0,
+    "heroGrow":1,
+    "sounds":1,
+    "rtcBits":3,
+    "killArmos":6,
+    "texLevel":0,
+    "heroName":"Clink",
+    "version":1,
+    "playTime":1425.12
+  },
+  "game":{"GameType":"Evo1"},
+  "time":1.55159e+12
+}
