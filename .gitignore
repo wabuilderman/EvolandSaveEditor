@@ -1,0 +1,6 @@
+$ git status
+$ cat .git/info/exclude
+*.[oa]
+Release/*
+EvolandSaveEditor/Release/*
+.vs/*
