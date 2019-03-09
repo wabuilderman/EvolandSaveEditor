@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 #include <array>
+#include <sstream>
+#include <iomanip>
+#include "TinySHA1.hpp"
 
 struct StrictObject {
 	// Create an empty Object
@@ -69,7 +72,7 @@ struct StrictObject {
 				break;
 			case 'd':
 				type = Double;
-				file >> *(data.doubleVal = new double);
+				file >> std::setprecision(19) >> *(data.doubleVal = new double);
 				break;
 			case 'n':
 				type = String;
@@ -230,7 +233,7 @@ struct StrictObject {
 				break;
 
 			case Member::Type::Double:
-				os << *members[i].data.doubleVal;
+				os << std::setprecision(19) << *members[i].data.doubleVal;
 				break;
 
 			case Member::Type::StringPair:
@@ -286,6 +289,198 @@ struct StrictObject {
 	}
 };
 
+
+std::string getFileExtension(const char * c) {
+	if (!c) return "";
+	int i = 0;
+	while (++i,*c++);
+	while (--i) if (*--c == '.') return c;
+}
+
+std::string toSaveMember(std::fstream & file, std::vector<std::string> & stringpool, int & status);
+
+std::string toSaveString(std::string name, std::vector<std::string>& stringpool) {
+
+	if (name.back() == ':')
+		name = name.substr(0, name.size() - 1);
+
+	name = name.substr(1, name.size() - 2);
+	
+	int indexOf = -1;
+	for (int i = 0; i < stringpool.size(); ++i)
+		if (stringpool[i] == name) indexOf = i;
+
+	if (indexOf == -1) {
+		stringpool.push_back(name);
+		return "y" + std::to_string(name.size()) + ":" + name;
+	}
+
+	return "R" + std::to_string(indexOf);
+}
+
+std::string toSaveObject(std::fstream & file, std::vector<std::string> & stringpool) {
+	std::string token = ",";
+	std::string result;
+
+	int numMembers = 0;
+	int status = 0;
+
+	std::string tmp;
+	int pos = file.tellp();
+	file >> tmp;
+
+	if (tmp[0] == '}') {
+		//file.seekp(-1, std::ios_base::cur);
+		return "n";
+	}
+	else {
+		file.seekp(pos);
+	}
+
+	while (token == ",") {
+		numMembers++;
+		status = 0;
+		result += toSaveMember(file, stringpool, status);
+		file.seekp(-1, std::ios_base::cur);
+		file >> token;
+	}
+
+	file >> token;
+
+	if (status == 1 && numMembers == 1) {
+		return "w" + result + ":0";
+	}
+	else {
+		return "o" + result + "g";
+	}
+}
+
+std::string toSaveValue(std::fstream & file, std::vector<std::string> & stringpool, int & status) {
+	std::string token;
+	file >> token;
+
+	if (token.back() == ',') {
+		token = token.substr(0, token.size() - 1);
+	}
+
+	if (token[0] == '"') {
+		status = 1;
+		return toSaveString(token, stringpool);
+	}
+	if (token[0] == '[') {
+		if (token.size() > 1 && token[1] == ']') {
+			return "ah";
+		}
+
+		// convert array of values
+		std::string subToken = ",";
+		std::string result;
+
+		int nCount = 0;
+		
+		while (subToken == ",") {
+			int subStatus = 0;
+			std::string value = toSaveValue(file, stringpool, subStatus);
+			if (value == "n") nCount++; else {
+				if (nCount > 1) {
+					result = result.substr(0, result.size() - nCount) + "u" + std::to_string(nCount);
+				}
+				nCount = 0;
+			}
+			result += value;
+			file.seekp(-1, std::ios_base::cur);
+			file >> subToken;
+			std::cout << subToken << std::endl;
+		}
+		file >> subToken;
+		status = 3; // Indicate this was an Array
+		return "a" + result + "h";
+	}
+	if (token[0] == '{') {
+		status = 2; // Indicate this was an Object
+		std::string result = toSaveObject(file, stringpool);
+		return result;
+	}
+	if (token == "true")
+		return "t";
+	if (token == "false")
+		return "f";
+	if (token == "null")
+		return "n";
+
+	double value = atof(token.c_str());
+	
+	if (value == 0)
+		return "z";
+
+	if (value == (double)((int)(value))) {
+		return "i" + std::to_string(((int)value));
+	}
+
+	std::ostringstream strs;
+	strs << std::setprecision(15) << value;
+
+	return "d" + strs.str();
+}
+
+std::string toSaveChestList(std::fstream & file, std::vector<std::string> & stringpool, int & status) {
+	std::string result;
+	std::string token;
+	file >> token;
+	token = ",";
+	while (token == ",") {
+		status = 0;
+		std::string value = toSaveValue(file, stringpool, status);
+		if (value == "z") value = "i0";
+		result += ":" + value.substr(1, value.size() - 1)  + "t";
+		file.seekp(-1, std::ios_base::cur);
+		file >> token;
+	}
+	file >> token;
+	return "q" + result + "h";
+}
+
+std::string toSaveMember(std::fstream & file, std::vector<std::string> & stringpool, int & status) {
+	std::string name;
+	file >> name;
+	name = toSaveString(name, stringpool);
+	if (name == "y7:nchests") {
+		std::string result = name + toSaveValue(file, stringpool, status);
+		std::string nextName;
+		file >> nextName;
+		name = toSaveString(nextName, stringpool);
+		return result + toSaveString(nextName, stringpool) + toSaveChestList(file, stringpool, status);
+	}
+
+	if (name == "y1:x" || name == "y1:y" || name == "y4:life" || name == "y8:bahaNext") {
+		std::string value = toSaveValue(file, stringpool, status);
+		if (value == "z") { value = "d0"; }
+		else value[0] = 'd';
+		return name + value;
+	}
+
+	return name + toSaveValue(file, stringpool, status);
+}
+
+std::string convertToSavefile(std::fstream & file) {
+	std::vector<std::string> stringpool;
+	std::string result;
+	char tokenC;
+	file >> tokenC;
+	return toSaveObject(file, stringpool);
+}
+
+
+std::string sha1encode(std::string data) {
+	sha1::SHA1 s;
+	uint32_t digest[5];
+	char tmp[48];
+	s.processBytes(data.c_str(), data.size());
+	s.getDigest(digest);
+	snprintf(tmp, 41, "%08x%08x%08x%08x%08x", digest[0], digest[1], digest[2], digest[3], digest[4]);
+	return tmp;
+}
+
 bool Save::parse(const char * filename) {
 	std::fstream file;
 	file.open(filename, std::fstream::in);
@@ -293,24 +488,36 @@ bool Save::parse(const char * filename) {
 		std::cout << "File failed to open. Please check filepath. [" << filename << "]" << std::endl;
 		return false;
 	}
-	
-	// All savedata is contained in a root-level object
-	std::vector<std::string> stringpool;
-	StrictObject data(file, stringpool);
-	file.close();
+	std::string extension = getFileExtension(filename);
+	if (extension == ".json") {
+		std::cout << "Loaded JSON file" << std::endl;
+		std::string save = convertToSavefile(file);
 
-	std::ofstream output;
-	std::string outputFilename(filename);
-	if (outputFilename.substr(outputFilename.size() - 4).compare(".sav") != 0) {
-		std::cout << "File output failed!";
-		return false;
+		//std::string test = "n#" + sha1encode("n" + sha1encode("ns*al!t")).substr(4, 32);
+		
+		save += "#" + sha1encode(save + sha1encode(save + "s*al!t")).substr(4, 32);
+
+		
+		std::ofstream output;
+		std::string outputFilename(filename);
+		outputFilename = outputFilename.substr(0, outputFilename.size() - 5);
+		outputFilename.append(".sav");
+		output.open(outputFilename.c_str());
+
+		output << save;
 	}
+	else {
+		// All savedata is contained in a root-level object
+		std::vector<std::string> stringpool;
+		StrictObject data(file, stringpool);
 
-	outputFilename = outputFilename.substr(0, outputFilename.size() - 4);
-	outputFilename.append(".json");
-	output.open(outputFilename.c_str());
-
-	data.print(output);
-
+		std::ofstream output;
+		std::string outputFilename(filename);
+		outputFilename = outputFilename.substr(0, outputFilename.size() - 4);
+		outputFilename.append(".json");
+		output.open(outputFilename.c_str());
+		data.print(output);
+	}
+	file.close();
 	return true;
 }

@@ -1,6 +1,7 @@
 #include "Save.hpp"
 
 #include <iostream>
+#include <fstream>
 #include <shobjidl.h>
 #include <string>
 
@@ -42,7 +43,6 @@ std::string BasicFileOpen()
 	return str;
 }
 
-
 int main(int argc, char **argv) {
 	Save save;
 	std::string fileLocation;
@@ -60,6 +60,5 @@ int main(int argc, char **argv) {
 		std::cout << "Parsing Complete; Press Enter to Exit" << std::endl;
 		std::cin.get();
 	}
-
 	return 0;
 }

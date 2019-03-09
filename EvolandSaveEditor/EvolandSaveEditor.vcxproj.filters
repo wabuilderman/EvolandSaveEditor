@@ -26,5 +26,8 @@
     <ClInclude Include="Save.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="TinySHA1.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
