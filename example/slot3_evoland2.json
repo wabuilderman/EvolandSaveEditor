@@ -1,0 +1,219 @@
+#evoland2
+{
+  "data": {
+    "saveIndex": null,
+    "currentLevel": "Forest",
+    "currentTime": 1,
+    "startAnchor": null,
+    "mainHero": null,
+    "heroX": 51.5,
+    "heroY": 54.75,
+    "heroZ": 0,
+    "heroDir": 1,
+    "heroFlags": 0,
+    "life": 9999,
+    "playerCharNames": {
+      "Hero": "Waru",
+      "Fina": "Fazzle"
+    },
+    "doneRtc": {
+      "MagiMachines_pre": true,
+      "Forest_helpFina": true,
+      "FirstVillageInterior_start": true
+    },
+    "inventory": [
+      {
+        "kind": "Sword",
+        "qty": 1
+      }, {
+        "kind": "Star",
+        "qty": 1
+      }
+    ],
+    "equip": [
+      "Sword"
+    ],
+    "teamPersist": {
+      "Fina": {
+        "unlock": 0
+      }
+    },
+    "team": [
+      {
+        "k": "Fina",
+        "life": -1,
+        "mp": -1
+      }
+    ],
+    "pendingRtc": [],
+    "gold": 73,
+    "level": {
+      "attack": 12,
+      "defense": 11,
+      "level": 2,
+      "life": 33,
+      "xp": 4
+    },
+    "currentAlly": 0,
+    "globalFlags": {
+      "saveTuto": true
+    },
+    "levelData": {
+      "Forest": {
+        "actives": [
+          8151, 
+          11581
+        ],
+        "check": [
+          8151
+        ],
+        "deathCount": 0,
+        "flags": {
+          "tuto": true
+        },
+        "minLevel": 1,
+        "minLife": 26
+      },
+      "NorthBridge": {
+        "actives": [],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+        },
+        "minLevel": 1,
+        "minLife": 10000
+      },
+      "FirstVillage": {
+        "actives": [
+          1065
+        ],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+          "foundSword": true,
+          "needKey": true
+        },
+        "minLevel": 1,
+        "minLife": 30
+      },
+      "FirstVillageInterior": {
+        "actives": [
+          4261, 
+          1146, 
+          3450
+        ],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+          "introDone": true
+        },
+        "minLevel": 1,
+        "minLife": 30
+      },
+      "WorldMap": {
+        "actives": [],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+        },
+        "minLevel": 1,
+        "minLife": 30
+      },
+      "CapitalInterior": {
+        "actives": [],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+        },
+        "minLevel": 1,
+        "minLife": 10000
+      },
+      "MagiMachines": {
+        "actives": [],
+        "check": [],
+        "deathCount": 0,
+        "flags": {
+        },
+        "minLevel": 1,
+        "minLife": 30
+      }
+    },
+    "tacticsTroups": {
+      "Archer": 0,
+      "Catapult": 0,
+      "Demon": 0,
+      "Fame": 0,
+      "Knight": 0,
+      "Paladin": 0,
+      "Recruit": 0,
+      "Soldier": 0
+    },
+    "sylves": null,
+    "sylvesTime": null,
+    "playTime": 957.6568975925449649,
+    "gameMode": 0,
+    "prevSave": "cy5%3AStatey9%3AsaveIndexny12%3AcurrentLevely6%3AForesty11%3AcurrentTimei1y11%3AstartAnchorny8%3AmainHerony5%3AheroXd87.5y5%3AheroYd102.75y5%3AheroZzy7%3AheroDiri1y9%3AheroFlagszy4%3Alifei30y15%3AplayerCharNamesby4%3AFinay6%3AFazzlehy7%3AdoneRtcby16%3AMagiMachines_prety26%3AFirstVillageInterior_startthy9%3Ainventoryaoy4%3Akindy5%3ASwordy3%3Aqtyi1ghy5%3AequipaR21hy11%3AteamPersistbhy4%3Ateamahy10%3ApendingRtcahy4%3Agoldi22y5%3Aleveloy6%3Aattacki10y7%3Adefensei10R28i1R12i30y2%3Axpi5gy11%3AcurrentAllyzy11%3AglobalFlagsbhy9%3AlevelDatabR3oy7%3Aactivesqhy5%3Acheckahy10%3AdeathCountzy5%3Aflagsbhy8%3AminLeveli1y7%3AminLifei10000gy11%3ANorthBridgeoR35qhR36ahR37zR38bhR39i1R40i10000gy12%3AFirstVillageoR35q%3A1065thR36ahR37zR38by10%3AfoundSwordty7%3AneedKeythR39i1R40i30gy20%3AFirstVillageInterioroR35q%3A4261t%3A1146t%3A3450thR36ahR37zR38by9%3AintroDonethR39i1R40i30gy8%3AWorldMapoR35qhR36ahR37zR38bhR39i1R40i30gy15%3ACapitalInterioroR35qhR36ahR37zR38bhR39i1R40i10000gy12%3AMagiMachinesoR35qhR36ahR37zR38bhR39i1R40i30ghy13%3AtacticsTroupsoy6%3AArcherzy8%3ACatapultzy5%3ADemonzy4%3AFamezy6%3AKnightzy7%3APaladinzy7%3ARecruitzy7%3ASoldierzgy6%3Asylvesny10%3AsylvesTimeny8%3AplayTimed737.049583959579y8%3AgameModezy8%3AprevSaveny4%3Amenuzy12%3AsfLostRoundszy5%3Acardsahy14%3AlastCheckPointny3%3Aachaoy5%3Acounti13y1%3Any4%3Atrimy6%3AunlocktgoR69i13R70y4%3AweedR72fgoR69i22R70y8%3AchitchatR72fgoR69zR70y8%3AworldmapR72tghy5%3Atimesaoy7%3AfpsTimed7310.64928944003y6%3AfpsMind54.512541914689y1%3AlR49y1%3Ati3y4%3Atimed121.829472541809goR77d36593.4642897067R78d47.7749251079243R79R42R80i1R81d609.771529722214goR77d326.466181506849R78d58.7840955277431R79R47R80i1R81d5.44858169555664ghy10%3AlockedTimed441.508854436874g",
+    "menu": 0,
+    "sfLostRounds": 0,
+    "cards": [],
+    "lastCheckPoint": {
+      "level": "Forest",
+      "uid": 8151
+    },
+    "ach": [
+      {
+        "count": 44,
+        "n": "trim",
+        "unlock": true
+      }, {
+        "count": 44,
+        "n": "weed",
+        "unlock": false
+      }, {
+        "count": 22,
+        "n": "chitchat",
+        "unlock": false
+      }, {
+        "count": 0,
+        "n": "worldmap",
+        "unlock": true
+      }, {
+        "count": 0,
+        "n": "fina",
+        "unlock": true
+      }
+    ],
+    "times": [
+      {
+        "fpsTime": 7310.649289440029861,
+        "fpsMin": 54.51254191468900245,
+        "l": "MagiMachines",
+        "t": 3,
+        "time": 121.8294725418089968
+      }, {
+        "fpsTime": 36593.4642897067024,
+        "fpsMin": 47.7749251079242967,
+        "l": "FirstVillage",
+        "t": 1,
+        "time": 609.7715297222140407
+      }, {
+        "fpsTime": 326.4661815068490114,
+        "fpsMin": 58.78409552774309788,
+        "l": "WorldMap",
+        "t": 1,
+        "time": 5.448581695556639737
+      }, {
+        "fpsTime": 13236.15233990319939,
+        "fpsMin": 43.18993337658189802,
+        "l": "Forest",
+        "t": 1,
+        "time": 220.6073136329650026
+      }
+    ],
+    "lockedTime": 513.0507181167599811
+  },
+  "game": {
+    "GameType": "Evo2"
+  },
+  "time": 1640394722000
+}

@@ -1,395 +1,105 @@
 {
-  "data": {
-    "monsters": true,
-    "items": [
-      {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "Potion"
-          }
-      }, {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "Sword2"
-          }
-      }, {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "Armor2"
-          }
-      }, {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "BigSword"
-          }
-      }, {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "Bombs"
-          }
-      }, {
-        "c": 1,
-        "id": {
-          "evo1.InventoryItem": "MagicScroll"
-          }
-      }
-    ],
-    "stars": 0,
-    "levels": [
-      {
-        "lv": 3,
-        "xp": 8
-      }, {
-        "lv": 3,
-        "xp": 8
-      }
-    ],
-    "cardLevel": 0,
-    "wdata": [
-      {
-        "stars": 0,
-        "chests": [
-          4695, 
-          4690, 
-          4512, 
-          4251, 
-          4699, 
-          5520, 
-          4983, 
-          4720, 
-          3999, 
-          4544, 
-          3003, 
-          2754, 
-          1185, 
-          5367
-        ],
-        "act": [],
-        "rem": [
-          5070, 
-          4982, 
-          4629, 
-          3024, 
-          3026, 
-          1744, 
-          1837, 
-          1926, 
-          2198, 
-          2380, 
-          2379, 
-          2558, 
-          4468, 
-          5008, 
-          5007
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          7119, 
-          5972, 
-          4948, 
-          9805
-        ],
-        "act": [],
-        "rem": [],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          527, 
-          0, 
-          372
-        ],
-        "act": [],
-        "rem": [
-          366, 
-          369, 
-          273, 
-          270
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          1967
-        ],
-        "act": [],
-        "rem": [
-          0
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [],
-        "act": [],
-        "rem": [],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          4721
-        ],
-        "act": [],
-        "rem": [],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          4046, 
-          3369, 
-          3788, 
-          3435, 
-          3518, 
-          3356, 
-          0, 
-          3337, 
-          1982, 
-          1114, 
-          1552, 
-          1393, 
-          374, 
-          1313, 
-          1914, 
-          2357, 
-          1583, 
-          2705, 
-          4839, 
-          5121
-        ],
-        "act": [
-          3203, 
-          3195, 
-          3597, 
-          1032, 
-          174, 
-          181, 
-          372, 
-          376
-        ],
-        "rem": [
-          3958, 
-          3688, 
-          3692, 
-          3774, 
-          3778, 
-          3779, 
-          3526, 
-          3102, 
-          1885, 
-          1028, 
-          439, 
-          1054, 
-          887, 
-          2343, 
-          2006, 
-          1943, 
-          2194, 
-          4631, 
-          5302, 
-          4707, 
-          4622, 
-          5298, 
-          5546
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          5220, 
-          3138, 
-          1873
-        ],
-        "act": [
-          3014
-        ],
-        "rem": [
-          0
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [
-          4039
-        ],
-        "act": [],
-        "rem": [
-          41
-        ],
-        "cards": 0
-      }, {
-        "stars": 0,
-        "chests": [],
-        "act": [],
-        "rem": [],
-        "cards": 0
-      }, {
-        "act": [],
-        "cards": 0,
-        "chests": [
-          -18, 
-          -11
-        ],
-        "rem": [],
-        "stars": 0
-      }, {
-        "act": [],
-        "cards": 0,
-        "chests": [
-          28687, 
-          26137, 
-          24615, 
-          23859, 
-          17717, 
-          9006
-        ],
-        "rem": [],
-        "stars": 0
-      }
-    ],
-    "maxLife": 12,
-    "invNotify": true,
-    "finalLife": 100,
-    "campQuest": null,
-    "villageUnlock": true,
-    "world": {
-      "evo1.WorldKind": "WHack"
-      },
-    "hackKills": 0,
-    "selectHero": true,
-    "airShip": null,
-    "cidName": "Sid",
-    "nchests": 54,
-    "chests": [
-      37, 
-      74, 
-      0, 
-      38, 
-      1, 
-      39, 
-      76, 
-      2, 
-      40, 
-      114, 
-      77, 
-      3, 
-      41, 
-      4, 
-      5, 
-      6, 
-      7, 
-      82, 
-      8, 
-      9, 
-      47, 
-      10, 
-      48, 
-      11, 
-      49, 
-      12, 
-      50, 
-      14, 
-      15, 
-      52, 
-      16, 
-      53, 
-      54, 
-      17, 
-      18, 
-      56, 
-      19, 
-      57, 
-      20, 
-      21, 
-      96, 
-      59, 
-      22, 
-      23, 
-      61, 
-      24, 
-      62, 
-      25, 
-      63, 
-      26, 
-      64, 
-      27, 
-      65, 
-      66, 
-      29, 
-      67, 
-      31, 
-      68, 
-      32, 
-      69, 
-      33, 
-      70, 
-      71, 
-      34, 
-      72, 
-      35, 
-      73, 
-      36
-    ],
-    "weapons": 1,
-    "ach": {
-      "gold": 2080,
-      "pots": 3,
-      "skel": 3,
-      "turt": 0,
-      "switches": 0
+  "monsters": true,
+  "items": [
+    {
+      "c": 1,
+      "id": {
+        "evo1.InventoryItem": "Potion"
+        }
+    }
+  ],
+  "stars": 0,
+  "levels": [
+    {
+      "lv": 1,
+      "xp": 0
+    }, {
+      "lv": 1,
+      "xp": 0
+    }
+  ],
+  "cardLevel": 0,
+  "wdata": [
+    {
+      "stars": 0,
+      "chests": [
+        4695, 
+        4690, 
+        4512, 
+        4251, 
+        5520, 
+        4983, 
+        3999
+      ],
+      "act": [],
+      "rem": [
+        4982, 
+        4629
+      ],
+      "cards": 0
+    }
+  ],
+  "maxLife": 0,
+  "invNotify": true,
+  "finalLife": 100,
+  "campQuest": null,
+  "villageUnlock": false,
+  "world": {
+    "evo1.WorldKind": "WStart"
     },
-    "pos": {
-      "x": 81,
-      "y": 56
-    },
-    "hackEquip": [
-      {
-        "flag": false,
-        "id": 1
-      }, {
-        "flag": false,
-        "id": 0
-      }, {
-        "flag": false,
-        "id": 3
-      }, {
-        "flag": false,
-        "id": 2
-      }, {
-        "flag": true,
-        "id": 5
-      }
-    ],
-    "bars": false,
-    "cards": [],
-    "girlBits": 1022,
-    "has3D": true,
-    "keys": 0,
-    "scroll": 2,
-    "left": true,
-    "life": 12,
-    "girlLife": 70,
-    "girlName": "Kaeris",
-    "bahaNext": 0,
-    "color": 1,
-    "canSave": true,
-    "freeMove": true,
-    "money": 1880,
-    "view": 5,
-    "music": 1,
-    "zoom": 3,
-    "actionItem": 0,
-    "heroGrow": true,
-    "sounds": 1,
-    "rtcBits": 3,
-    "killArmos": 6,
-    "texLevel": 0,
-    "heroName": "Clink",
-    "version": 1,
-    "playTime": 1425.12
+  "hackKills": 0,
+  "selectHero": false,
+  "airShip": null,
+  "cidName": null,
+  "nchests": 7,
+  "chests": [
+    7, 
+    0, 
+    8, 
+    1, 
+    2, 
+    4, 
+    54, 
+    6
+  ],
+  "weapons": 1,
+  "ach": {
+    "gold": 0,
+    "pots": 0,
+    "skel": 0,
+    "turt": 0,
+    "switches": 0
   },
-  "game": {
-    "GameType": "Evo1"
-    },
-  "time": 1.55159e+12
+  "pos": {
+    "x": 39,
+    "y": 47
+  },
+  "hackEquip": [],
+  "bars": false,
+  "cards": [],
+  "girlBits": 0,
+  "has3D": false,
+  "keys": 0,
+  "scroll": 1,
+  "left": true,
+  "life": 0,
+  "girlLife": null,
+  "girlName": null,
+  "bahaNext": 0,
+  "color": 0,
+  "canSave": true,
+  "freeMove": false,
+  "money": 0,
+  "view": 0,
+  "music": 0,
+  "zoom": 4,
+  "actionItem": 0,
+  "heroGrow": false,
+  "sounds": 1,
+  "rtcBits": 0,
+  "killArmos": 0,
+  "texLevel": 0,
+  "heroName": null,
+  "version": 1,
+  "playTime": 37.58172253939849838
 }
